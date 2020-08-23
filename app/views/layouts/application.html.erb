@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OvertimeApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Overtime</title>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+<main class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'shared/nav' %>
+      <%= yield %>
+    </div>
+  </div>
+</main>
+
+</body>
 </html>
