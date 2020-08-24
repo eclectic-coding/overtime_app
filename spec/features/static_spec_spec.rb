@@ -1,9 +1,9 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.feature "StaticSpecs", type: :feature do
 
   scenario do
-    visit '/'
+    visit "/"
 
     expect(page.status_code).to eq(200)
   end

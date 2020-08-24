@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_08_24_113421) do
   create_table "posts", force: :cascade do |t|
     t.date "date"
     t.text "rationale"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
