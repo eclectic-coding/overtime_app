@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    # flash.now[:notice] = "I am a sample flash message for the home page"
   end
 
   def new
