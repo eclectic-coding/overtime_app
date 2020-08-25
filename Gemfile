@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.7.1"
 
+gem "administrate"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "devise"
 gem "devise-bootstrapped"
