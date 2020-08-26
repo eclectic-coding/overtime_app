@@ -11,10 +11,7 @@ class UserDashboard < Administrate::BaseDashboard
     posts: Field::HasMany,
     id: Field::Number,
     email: Field::String,
-    encrypted_password: Field::String,
-    reset_password_token: Field::String,
-    reset_password_sent_at: Field::DateTime,
-    remember_created_at: Field::DateTime,
+    password: Field::String,
     first_name: Field::String,
     last_name: Field::String,
     type: Field::String,
@@ -31,7 +28,7 @@ class UserDashboard < Administrate::BaseDashboard
   posts
   id
   email
-  encrypted_password
+  password
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,10 +37,7 @@ class UserDashboard < Administrate::BaseDashboard
   posts
   id
   email
-  encrypted_password
-  reset_password_token
-  reset_password_sent_at
-  remember_created_at
+  password
   first_name
   last_name
   type
@@ -57,10 +51,7 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
   posts
   email
-  encrypted_password
-  reset_password_token
-  reset_password_sent_at
-  remember_created_at
+  password
   first_name
   last_name
   type

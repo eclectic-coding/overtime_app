@@ -5,6 +5,7 @@ require:
 AllCops:
   Exclude:
     - bin/**/*
+    - config/**/*
     - db/schema.rb
     - db/migrate/*.rb
     - node_modules/**/*
