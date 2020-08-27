@@ -1,7 +1,5 @@
-require 'simplecov'
+require "simplecov"
 SimpleCov.start
-
-require 'fuubar'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -13,8 +11,4 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
-  config.fuubar_progress_bar_options = { format: 'Completed Tests <%B> %p%% %a' }
-  config.fuubar_output_pending_results = false
-
 end

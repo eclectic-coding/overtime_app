@@ -8,6 +8,7 @@ if Rails.env.production?
 end
 require "rspec/rails"
 require "capybara/rails"
+require 'fuubar'
 
 include Warden::Test::Helpers
 Warden.test_mode!
@@ -29,5 +30,7 @@ RSpec.configure do |config|
   config.before(:each) { DatabaseCleaner.clean }
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+  config.fuubar_progress_bar_options = { format: 'Completed Tests <%B> %p%% %a' }
+  config.fuubar_output_pending_results = false
   config.include FactoryBot::Syntax::Methods
 end
